@@ -16,7 +16,7 @@ pipeline {
 
         stage('Test') {
             steps{
-                powershell './jenkins/scripts/test.ps1'
+                powershell 'npm test'
             }
 
         }
