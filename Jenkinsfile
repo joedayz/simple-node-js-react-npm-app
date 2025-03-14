@@ -8,6 +8,13 @@ pipeline {
             }
 
         }
+
+        stage('Test') {
+            steps{
+                powershell './jenkins/scripts/test.ps1'
+            }
+
+        }
     }
 
 }
