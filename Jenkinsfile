@@ -9,14 +9,14 @@ pipeline {
     stages {
         stage('Build') {
             steps{
-                powershell 'npm install'
+                bat 'npm install'
             }
 
         }
 
         stage('Test') {
             steps{
-                powershell 'npm test'
+                bat 'npm test'
             }
 
         }
@@ -24,9 +24,9 @@ pipeline {
         
         stage('Deliver') {
             steps{
-                powershell './jenkins/scripts/deliver.ps1'
+                bat './jenkins/scripts/deliver.ps1'
                 input message: 'Finished using the web site? (Click "Proceed" to continue)'
-                powershell './jenkins/scripts/kill.ps1'
+                bat './jenkins/scripts/kill.ps1'
             }
 
         }
