@@ -1,6 +1,6 @@
 @echo off
 echo The following command terminates the "npm start" process using its PID
-echo (written to ".pidfile"), all of which were conducted when "deliver.sh" was executed.
+echo (written to ".pidfile"), all of which were conducted when "deliver.bat" was executed.
 
 :: Leer el PID del archivo .pidfile
 set /p PID=<.pidfile
